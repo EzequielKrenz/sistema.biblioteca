@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de gerenciamento de Biblioteca</title>
+</head>
+<body>
+    <h1> Livros,</h1>
+
+    {% if titulo_livro %}
+        <p>O livro {{titulo_livro}} foi Salvo com SUCESSO</p>
+    {% endif %}
+
+    <form action="salva_livro" method="POST">
+        {% csrf_token %}
+        <label for="titulo"> titulo: </label>
+        <input type="text" name="titulo_livro">
+        <BR>
+
+        <label for="autor"> Autor(a): </label>
+        <input type="text" name="autor_livro">
+        <br>
+
+        <label for="editora"> editora: </label>
+        <input type="text" name="editora_livro">
+        <br>
+
+        <button type="submit">Salvar</button>
+    </form>
+
+</body>
+</html>
