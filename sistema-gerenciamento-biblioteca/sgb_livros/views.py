@@ -1,17 +1,20 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from .models import Livro
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def livros(request):
     return render(request, 'livros.html')
 
+@login_required
 def salva_livro(request):
     titulo_livro = request.POST["titulo_livro"] #pegar nome do livro que esta no .HTML
     autor_livro = request.POST["autor_livro"]
     editora_livro = request.POST["editora_livro"]
     return render(request, 'livros.html', context={'titulo_livro':titulo_livro})
 
+@login_required
 def cadastra_livro(request):
     if request.method == 'POST':
         livro_id = request.POST['livro_id']
@@ -41,6 +44,7 @@ def cadastra_livro(request):
     livros = Livro.objects.all()
     return render(request, 'livros.html', {'livros': livros})
 
+@login_required
 def exclui_livro(request, livro_id):
     # get_object_or_404() esta função busca no banco de dados
     # um objeto da tabela livro cujo campo id seja igual a livro_id.
@@ -50,6 +54,7 @@ def exclui_livro(request, livro_id):
     livro.delete()
     return redirect('cadastra_livro')
 
+@login_required
 def edita_livro(request, livro_id):
     livro = get_object_or_404(Livro, id=livro_id)
     livros = Livro.objects.all()
