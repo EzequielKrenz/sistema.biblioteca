@@ -22,7 +22,7 @@
         <div class="card p-4 mb-4 shadow-sm">
         <form action="" method="POST">
             {% csrf_token %}
-            <input type="hidden" name="livro_id" value="{{livro.editar|default:''}}">
+            <input type="hidden" name="livro_id" value="{{livro.editar.id|default:''}}">
             <div class="row g-3">
 
                 <div class="col-md-6">
@@ -33,7 +33,7 @@
 
                 <div class="col-md-6">
                     <label class="forn-label">Autor</label>
-                    <input type="text" name="autor" class="form-control" value="{{livro_editar.autor|default:''}}"
+                    <input type="text" name="autor" class="form-control" value="{{livro_editar.autor.nome|default:''}}"
                     required>
                 </div>
 
@@ -73,7 +73,7 @@
             {% for livro in livros %}
             <tr>
                 <td>{{ livro.titulo }}</td>
-                <td>{{ livro.autor }}</td>
+                <td>{{ livro.autor.nome }}</td>
                 <td>{{ livro.ano_publicacao }}</td>
                 <td>{{ livro.editora }}</td>
                 <td>
