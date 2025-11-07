@@ -12,3 +12,9 @@ class Livro(models.Model):
     autor = models.ForeignKey(Autor, on_delete=models.CASCADE, related_name='livros')
     ano_publicacao = models.PositiveIntegerField(max_length=150)
     editora = models.CharField(max_length=100, blank=True, null=True)
+
+#class Emprestimo(models.Model):
+#   titulo = models.CharField(max_length=200)
+#
+#
+#
