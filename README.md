@@ -1,37 +1,37 @@
-#   SISTEMA GERENCIADOR DE BIBLIOTECA
-    Este Sistema foi criado para uma atividade de ensino técnico superio em Análise e Desenvolvimento de Sistemas 
-para a matéria de Programação Web 1. Criando uma aplicação em python de um Sistema Gerenciador de Biblioteca, para estudo e aprendizado dos alunos.
+# 📚 Sistema de Gerenciamento de Biblioteca
 
-##  Este Sistema tem as seguintes implementações:
+Este é um projeto de [disciplina da faculdade / estudo pessoal / portfólio] para um sistema de gerenciamento de bibliotecas, permitindo o controle de usuários, acervo e empréstimos.
+
+> 🚧 **Status do Projeto:** [Em Desenvolvimento / Concluído / Em Manutenção] 🚧
+
+---
+
+## 🚀 Funcionalidades Principais
+
+O sistema conta com as seguintes funcionalidades essenciais:
+
+* **🔑 Autenticação de Usuário:**
+    * Página de **Login** segura para membros e administradores.
+    * Formulário de **Registro** (cadastro) de novos usuários.
+    * [Opcional: Recuperação de senha.]
+
+* **➕ Gerenciamento (Cadastro):**
+    * CRUD (Criar, Ler, Atualizar, Deletar) de **Livros** (título, autor, editora, ISBN, etc.).
+    * CRUD de **Usuários** / Membros.
+    * [Opcional: CRUD de Autores, Editoras, Gêneros.]
+
+* **🔍 Busca no Acervo:**
+    * Ferramenta de **Busca** para encontrar livros por título, autor, gênero ou palavra-chave.
+    * Filtros e ordenação dos resultados.
+
+* **📜 Histórico e Empréstimos:**
+    * Funcionalidade para registrar empréstimos e devoluções.
+    * **Histórico** de empréstimos por usuário (quais livros o usuário já pegou).
+    * **Histórico** do livro (quais usuários já pegaram aquele livro).
 
 
-###     - Login
-            Tela Login com usuario e senha;
-###     - Cadastro 
-            Casdastro de usuário, criando uma conta se não existente;
-###     - Esqueceu sua Senha
-            Link para tela que possibilita atravéz de um outro fator alterar senha;
-###     - E-mail
-            Autenticação de entrada com  e-mail da sua Google;
+## 👨‍💻 Autor
 
-##      Sistema - Tela Principal
+Feito por **[Ezequiel Krenz]**.
 
-##          Busca
-
-###     - Busca por titulo de livro
-###     - Busca por Editora
-###     - Busca por Autora 
-
-##          Cadastro
-
-###     - Cadastro de titulo de livro
-###     - Cadastro de Editora
-###     - Cadastro de Autora 
-
-##          Histórico
-
-###     - Hisrico buscade livro
-###     - Hisrico busca por Editora
-###     - Hisrico busca por Autora 
-
-##  Emprestimo de Livros
+GitHub](https://github.com/EzequielKrenz)
